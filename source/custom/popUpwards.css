@@ -1,0 +1,68 @@
+
+@-webkit-keyframes popUpwards {
+  0% {
+    -webkit-transform:matrix(0.97,0,0,1,0,12);
+    transform:matrix(0.97,0,0,1,0,12);
+    opacity:0
+  }
+  20% {
+    -webkit-transform:matrix(0.99,0,0,1,0,2);
+    transform:matrix(0.99,0,0,1,0,2);
+    opacity:.7
+  }
+  40% {
+    -webkit-transform:matrix(1,0,0,1,0,-1);
+    transform:matrix(1,0,0,1,0,-1);
+    opacity:1
+  }
+  70% {
+    -webkit-transform:matrix(1,0,0,1,0,0);
+    transform:matrix(1,0,0,1,0,0);
+    opacity:1
+  }
+  100% {
+    -webkit-transform:matrix(1,0,0,1,1,1);
+    transform:matrix(1,0,0,1,0,0);
+    opacity:1
+  }
+}
+
+@keyframes popUpwards{
+  0% {
+    -webkit-transform:matrix(0.97,0,0,1,0,12);
+    transform:matrix(0.97,0,0,1,0,12);
+    opacity:0
+  }
+  20% {
+    -webkit-transform:matrix(0.99,0,0,1,0,2);
+    transform:matrix(0.99,0,0,1,0,2);
+    opacity:.7
+  }
+  40% {
+    -webkit-transform:matrix(1,0,0,1,0,-1);
+    transform:matrix(1,0,0,1,0,-1);
+    opacity:1
+  }
+  70% {
+    -webkit-transform:matrix(1,0,0,1,0,0);
+    transform:matrix(1,0,0,1,0,0);
+    opacity:1
+  }
+  100% {
+    -webkit-transform:matrix(1,0,0,1,0,0);
+    transform:matrix(1,0,0,1,0,0);
+    opacity:1
+  }
+}
+
+.popUpwards {
+    -webkit-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-timing-function: linear;
+    -ms-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-name: popUpwards;
+    -ms-animation-name: popUpwards;
+    animation-name: popUpwards;
+}
