@@ -51,22 +51,30 @@ module.exports = function (grunt) {
       target = ['source/_base.css'],
       count = 0;
 
+    var animationList = [];
     for (category in categories) {
       if (categories.hasOwnProperty(category)) {
         files = categories[category];
+        var animations = [],
+          animCount = 0;
         for (file in files) {
           if (files.hasOwnProperty(file) && files[file]) {
             target.push('source/' + category + '/' + file + '.css');
+            animations[animCount] = file;
+            animCount += 1;
             count += 1;
           }
         }
+        animationList[category] = animations;
       }
     }
+    console.log(animationList);
 
     if (!count) {
       grunt.log.writeln('No animations activated.');
     } else {
       grunt.log.writeln(count + (count > 1 ? ' animations' : ' animation') + ' activated.');
+      require('fs').writeFileSync('animations.json', JSON.stringify(animationList, null, 4));
     }
 
     grunt.config('concat', {
