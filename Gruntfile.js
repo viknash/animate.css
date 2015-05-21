@@ -51,7 +51,7 @@ module.exports = function (grunt) {
       target = ['source/_base.css'],
       count = 0;
 
-    var animationList = [];
+    var animationList = {};
     for (category in categories) {
       if (categories.hasOwnProperty(category)) {
         files = categories[category];
@@ -68,7 +68,6 @@ module.exports = function (grunt) {
         animationList[category] = animations;
       }
     }
-    console.log(animationList);
 
     if (!count) {
       grunt.log.writeln('No animations activated.');
